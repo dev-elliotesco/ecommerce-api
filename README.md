@@ -33,11 +33,11 @@ npm install
 
 ## Configuración
 
-Antes de ejecutar el proyecto, debes configurar.... Crea un archivo `.env` en la raíz del proyecto con el siguiente contenido:
+Antes de ejecutar el proyecto, debes configurar la contraseña de la base de datos Postgres, el nombre de la base de datos y el puerto del servidor de la app como variables de entorno. Crea un archivo `.env` en la raíz del proyecto con el siguiente contenido:
 
-- 
-- 
--   
+- `DB_PASSWORD` : La contraseña de tu base de datos,  Por ejemplo, `password`.
+- `DB_NAME`: El nombre de tu base de datos. Por ejemplo, `ecommerce_db`.
+- `APP_PORT`: El puerto en el que se ejecutará el servidor. Por ejemplo, `3000`.
 
 
 ## Ejecución
@@ -58,7 +58,7 @@ npm run start:dev
 cd deployment
 
 # Ejecuta Docker Compose
-docker compose --env-file ../.env up
+docker compose --env-file ../.env up -d
 ```
 
 ## Autor
