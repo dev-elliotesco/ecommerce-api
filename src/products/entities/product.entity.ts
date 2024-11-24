@@ -40,7 +40,8 @@ export class Product {
     gender: string;
 
     @Column('text',{
-        array: true
+        array: true,
+        default: []
     })
     tags: string[];
 
